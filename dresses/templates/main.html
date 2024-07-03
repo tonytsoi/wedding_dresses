@@ -43,7 +43,7 @@
                             
                             {% for image in images %}
                             
-                            {% if image.dress == dress %}
+                            {% if image.dress == dress and image.first_pic == True %}
                             
                                 <img class="image-thumbnail"
                                 src="{{image.image.url}}" 

@@ -18,3 +18,4 @@ class Dress(models.Model):
 class Image(models.Model):
     image = models.ImageField(null=False, blank=False)
     dress = models.ForeignKey(Dress, on_delete=models.SET_NULL, null=True, blank=False)
+    first_pic = models.BooleanField(null=False, blank=False)

@@ -25,8 +25,7 @@
                                 {{brand.name}}
                             </a>
                         </li>
-                        {% endfor %}  
-                        <a href="#" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>                    
+                        {% endfor %}
                     </ul>
                 </div>
                 
@@ -41,6 +40,9 @@
                         {% for dress in dresses %}
                         <div class="col-md-4">
                             <div class="card my-2">
+                                <img class="image-thumbnail"
+                                src="{{dress.image.url}}" 
+                                class="card-img-top" alt="...">
                                 
                                 <div class="card-body">
                                   <small>Brand: {{dress.brand.name}}</small>

@@ -7,4 +7,54 @@
 
 
 {% block content %}
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-3">
+            
+                <div class="card">
+                    <div class="card-header">
+                        Brands
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="{% url 'main' %}">All</a>
+                        </li>
+                        {% for brand in brands %}
+                        <li class="list-group-item">
+                            <a href="{% url 'main' %}?brand={{brand.name}}">
+                                {{brand.name}}
+                            </a>
+                        </li>
+                        {% endfor %}  
+                        <a href="#" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a>                    
+                    </ul>
+                </div>
+                
+            </div>
+        
+    
+    
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="row">
+                    
+                        {% for dress in dresses %}
+                        <div class="col-md-4">
+                            <div class="card my-2">
+                                
+                                <div class="card-body">
+                                  <small>Brand: {{dress.brand.name}}</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-dark btn-sm m-1">View</a>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <h3>No dresses...</h3>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

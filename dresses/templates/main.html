@@ -40,10 +40,18 @@
                         {% for dress in dresses %}
                         <div class="col-md-4">
                             <div class="card my-2">
+                            
+                            {% for image in images %}
+                            
+                            {% if image.dress == dress %}
+                            
                                 <img class="image-thumbnail"
-                                src="{{dress.image.url}}" 
+                                src="{{image.image.url}}" 
                                 class="card-img-top" alt="...">
-                                
+                            {% else %}
+                            
+                            {% endif %}
+                            {% endfor %} 
                                 <div class="card-body">
                                   <small>Brand: {{dress.brand.name}}</small>
                                 </div>

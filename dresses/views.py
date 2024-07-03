@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # from django.http import HttpResponse
-from .models import Brand, Dress
+from .models import Brand, Dress, Image
 
 # Create your views here.
 def main(request):
@@ -11,8 +11,9 @@ def main(request):
         dresses = Dress.objects.filter(brand__name=brand)
     
     brands = Brand.objects.all()
+    images = Image.objects.all()
     
     
-    context = {'brands': brands, 'dresses': dresses}
+    context = {'brands': brands, 'dresses': dresses, 'images': images}
     
     return render(request, "main.html", context)

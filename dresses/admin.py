@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Brand, Dress
+from .models import Brand, Dress, Image
 
 # Register your models here.
 admin.site.register(Brand)
 admin.site.register(Dress)
+admin.site.register(Image)

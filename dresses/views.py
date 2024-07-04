@@ -13,7 +13,13 @@ def main(request):
     brands = Brand.objects.all()
     images = Image.objects.all()
     
-    
     context = {'brands': brands, 'dresses': dresses, 'images': images}
     
     return render(request, "main.html", context)
+
+def viewDress(request, pk):
+    dress = Dress.objects.get(id=pk)
+    images = Image.objects.filter(dress=dress)
+    
+    context = {"dress": dress, "images": images}
+    return render(request, "dress.html", context)

@@ -22,3 +22,13 @@ class Image(models.Model):
     
     def __str__(self):
         return str(self.dress)
+    
+# class Booking(models.Model):
+#     dress = models.ForeignKey(Dress, on_delete=models.SET_NULL, null=True, blank=False)
+#     customer = models.CharField(max_length=100, null=False, blank=False)
+#     start_date = models.DateField(auto_now_add=True)
+#     end_date = models.DateField(auto_now_add=True)
+    
+#     def __str__(self):
+#         return self.customer
+    

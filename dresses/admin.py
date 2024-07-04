@@ -5,3 +5,4 @@ from .models import Brand, Dress, Image
 admin.site.register(Brand)
 admin.site.register(Dress)
 admin.site.register(Image)
+# admin.site.register(Booking)

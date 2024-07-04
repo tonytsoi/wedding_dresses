@@ -43,19 +43,19 @@
                             
                             {% for image in images %}
                             
-                            {% if image.dress == dress and image.first_pic == True %}
-                            
-                                <img class="image-thumbnail"
-                                src="{{image.image.url}}" 
-                                class="card-img-top" alt="...">
-                            {% else %}
-                            
-                            {% endif %}
+                                {% if image.dress == dress and image.first_pic == True %}
+                                
+                                    <img class="image-thumbnail"
+                                    src="{{image.image.url}}" 
+                                    class="card-img-top" alt="...">
+                                {% else %}
+                                
+                                {% endif %}
                             {% endfor %} 
                                 <div class="card-body">
                                   <small>Brand: {{dress.brand.name}}</small>
                                 </div>
-                                <a href="#" class="btn btn-outline-dark btn-sm m-1">View</a>
+                                <a href="{% url 'dress' dress.id %}" class="btn btn-outline-dark btn-sm m-1">View</a>
                             </div>
                         </div>
                         {% empty %}

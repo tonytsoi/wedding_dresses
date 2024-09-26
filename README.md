@@ -1,4 +1,4 @@
-## Building a Web Application for a Bridal Gown Rental Business using Python Django ##
+## Building a Web Application for a Wedding Dress Rental Business using Python Django ##
 ![dressapp](https://github.com/tonytsoi/wedding_dresses/blob/master/WeddingDressApp.jpg)
 
 I have recently built a web application using the Django framework in Python for a wedding dress rental business. This app would serve as a photo catalogue for all the dresses available in the shop, as well as helping the business to keep track of the dresses in its inventory and manage bookings.
